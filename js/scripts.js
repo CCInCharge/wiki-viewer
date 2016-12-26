@@ -9,4 +9,11 @@ $.ajax({
 
 function showData(data) {
   console.log(data);
+  results = data.query.search;
 }
+
+$(document).ready(function(){
+  $(".search-button").click(function(){
+    searchData($(".search-form").val());
+  });
+});

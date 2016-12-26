@@ -1,0 +1,11 @@
+.search-form {
+    width: 130px;
+    -moz-transition: width 0.7s ease-in-out;
+    -webkit-transition: width 0.7s ease-in-out;
+    transition: width 0.7s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.search-form[type=text]:focus {
+    width: 60%;
+}
