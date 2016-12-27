@@ -2,17 +2,21 @@
 function searchData(query) {
 $.ajax({
   url: "https://en.wikipedia.org/w/api.php?",
-  data: {format: "json", action: "query", list: "search", origin: "*", srsearch: query},
+  data: {format: "json", action: "opensearch", origin: "*", search: query},
   success: showData
 });
 }
 
 function showData(data) {
   console.log(data);
-  search_results = data.query.search;
+  searchTitles = data[1];
+  searchExtracts = data[2];
+  searchUrls = data[3];
   $("#results").empty();
-  for (i = 0; i < search_results.length; i++) {
-    $("#results").append("<p>" + search_results[i].title + "</p>");
+  for (i = 0; i < searchTitles.length; i++) {
+    $("#results").append("<p>" + searchTitles[i] + "</p>");
+    $("#results").append("<p>" + searchExtracts[i] + "</p>");
+    $("#results").append('<a href="' + searchUrls[i] + '">Link</a>');
   }
 }
 
