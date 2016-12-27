@@ -3,9 +3,21 @@
     -moz-transition: width 0.7s ease-in-out;
     -webkit-transition: width 0.7s ease-in-out;
     transition: width 0.7s ease-in-out;
+    margin-bottom: 20px;
 }
 
 /* When the input field gets focus, change its width to 100% */
 .search-form[type=text]:focus {
     width: 60%;
+}
+
+
+.search-result {
+  border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+}
+
+.search-result:hover {
+  border: 1px solid orange;
 }
