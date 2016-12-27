@@ -8,7 +8,6 @@ $.ajax({
 }
 
 function showData(data) {
-  console.log(data);
   searchTitles = data[1];
   searchExtracts = data[2];
   searchUrls = data[3];
