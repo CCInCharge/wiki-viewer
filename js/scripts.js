@@ -14,7 +14,7 @@ function showData(data) {
   searchUrls = data[3];
   $("#results").empty();
   for (i = 0; i < searchTitles.length; i++) {
-    var newContent = "<p>" + searchTitles[i] + "</p>" + "<p>" + searchExtracts[i] + "</p>";
+    var newContent = "<p><b>" + searchTitles[i] + "</b></p>" + "<p>" + searchExtracts[i] + "</p>";
     $("#results").append('<a href="' + searchUrls[i] + '"><div class="search-result col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">' + newContent + '</div></a>');
   }
 }
